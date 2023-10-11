@@ -93,7 +93,7 @@ int main()
 		return 0;
 	}
 
-	// Gets the handle file name of the LSASS process
+	// Get the handle's file name of the LSASS process
 	TCHAR szFileName[MAX_PATH];
 	DWORD dwSize = MAX_PATH;
 	QueryFullProcessImageName(hLsass, 0, szFileName, &dwSize);
